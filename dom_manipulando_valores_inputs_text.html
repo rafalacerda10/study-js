@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Valores</title>
+    <script>
+
+           function trem() {
+               //selecionar o valor digitado
+                console.log(document.getElementById('entrada').value)
+
+                var caractere = document.getElementById('entrada').value
+                //Limpar conteudo dentro do value
+                document.getElementById('entrada').value = ''
+
+                //limpar espaços em branco nas extremidades da string
+                caractere.trim()
+            
+            switch (caractere) {
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    //Adicionar o caractere no compo referente ao numero
+                    document.getElementById('apenas_numeros').value += caractere
+                    break;
+                    //Adicionar elemntos no campo referente a letras
+                    default:
+                        document.getElementById('apenas_letras').value += caractere
+
+                }
+            
+            }
+
+    
+    </script>
+</head>
+<body>
+    
+    <input
+    type="text"
+    placeholder="Digite um Caractere"
+    onkeyup="trem()"
+    id="entrada"
+    />
+    <br>
+
+    <hr/>
+
+    <br>
+    <span>LETRAS</span> <br>
+    <input id="apenas_letras" type="text"  disabled="disabled"> <br>
+    <span>NUMEROS</span> <br>
+    <input id="apenas_numeros" type="text"  disabled="disabled">
+
+</body>
+</html>

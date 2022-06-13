@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function focoNisso(CorFundo) {
+            document.getElementById('aleatorio').style.backgroundColor = CorFundo;
+        }
+        function FocaNao(mesmaCor) {
+            document.getElementById('aleatorio').style.backgroundColor = mesmaCor;
+        }
+
+        function Vermelho(cor3) {
+        
+        var caractere =  console.log(document.getElementById('aleatorio').value)
+
+        switch (caractere) {
+            case 1:
+                document.getElementById('aleatorio').style.backgroundColor = cor3;
+                break;
+        
+            default:
+                break;
+        } 
+
+        
+ 
+ 
+     }
+
+    </script>
+</head>
+<body>
+
+    <br/>
+    <br/>
+
+    <h4>Ficação-do-Conteudo</h4>
+
+    <input onkeypress="Vermelho('#FF0000')" onfocus="focoNisso('#FFFF00')" onblur="FocaNao('#FFF')" type="text" name="texto" id="aleatorio">
+
+
+</body>
+</html>

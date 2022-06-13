@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LacoForeach</title>
+    <script>
+
+        
+       
+        var listaFuncionarios = ['Viviane', 'Marcelo', 'Matheus', 'Elisangela']
+
+        for(var x in listaFuncionarios) { 
+            document.write('  <br /> indice ' + x + ' valor ' + listaFuncionarios[x])
+        } // n precisa ter indice certinho tendo uma flexibilidade interessnte
+        
+        document.write('<hr />')
+
+        document.write(listaFuncionarios)
+        listaFuncionarios.forEach(function(valor, indice, array) {
+            //logica
+            document.write((' <br /> indice ' + indice + ' | valor '+ valor))
+            if(valor == 'Marcelo') {
+                array[indice] = 'Um novo valor'
+            }
+        })
+
+        document.write('<hr />'+listaFuncionarios)
+        document.write('<br />' + listaFuncionarios[1])
+ 
+    </script>
+</head>
+<body>
+ 
+
+</body>
+</html>

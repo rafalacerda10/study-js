@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando estilos de Elementos</title>
+    <style>
+        #quadrado_imenso { 
+            width: 500px; height: 500px;
+            margin: auto ;
+            margin-top: 5%;
+            border: 5px black solid;
+         
+        }
+    </style>
+
+    <script>
+
+        function  mod(cordeFundo) {       
+
+            document.getElementById('quadrado_imenso').style.backgroundColor = cordeFundo;
+
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <button type="button" onclick="mod('#0000FF')">
+            Azul
+        </button>
+        <button type="button" onclick="mod('#FF0000')">
+            Vermelho
+        </button>
+        <button type="button" onclick="mod('#00FF00')">
+            Verde
+        </button>
+    </div>
+    <div id="quadrado_imenso"></div>
+    
+</body>
+</html>
